@@ -53,7 +53,7 @@ my-app/
 ### Installation
 1. Clone the repository:
 	```bash
-	git clone <repo-url>
+	git clone (https://github.com/AtulKumar2004/P2PCollab/)
 	cd my-app
 	```
 2. Install dependencies:
