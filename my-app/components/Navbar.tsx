@@ -3,17 +3,17 @@ import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 
 const navOptions = [
-  { label: "Admin/Faculty Tools", href: "#" },
-  { label: "Chat System", href: "#" },
+  { label: "Admin/Faculty Tools", href: "/admin-faculty" },
+  { label: "Chat System", href: "chat" },
   { label: "Recruiter Portal", href: "#" },
-  { label: "Mentor Assignments", href: "#" },
+  { label: "Mentor Assignments", href: "mentor-assignment" },
   { label: "Request Mentorship", href: "#" },
   { label: "Mentor Dashboard", href: "#" },
   { label: "Recruiter Dashboard", href: "#" },
   { label: "Faculty Dashboard", href: "#" },
-  { label: "Signup", href: "#" },
+  { label: "Signup", href: "signup" },
   { label: "Student Dashboard", href: "#" },
-  { label: "Login / Signup", href: "#" },
+  { label: "Login / Signup", href: "signin" },
 ];
 
 export default function Navbar() {
