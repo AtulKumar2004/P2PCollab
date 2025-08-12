@@ -70,14 +70,14 @@ export default function SignUp() {
                 <Label htmlFor="role" className="text-gray-300">Role</Label>
                 <Select>
                   <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white">
-                    <SelectValue placeholder="Select your role" />
+                    <SelectValue placeholder="Select your role" className="text-white" />
                   </SelectTrigger>
                   <SelectContent className="bg-gray-800 border-gray-700">
-                    <SelectItem value="student">Student</SelectItem>
-                    <SelectItem value="faculty">Faculty</SelectItem>
-                    <SelectItem value="alumni">Alumni</SelectItem>
-                    <SelectItem value="recruiter">Recruiter</SelectItem>
-                    <SelectItem value="mentor">Mentor</SelectItem>
+                    <SelectItem value="student" className="text-white">Student</SelectItem>
+                    <SelectItem value="faculty" className="text-white">Faculty</SelectItem>
+                    <SelectItem value="alumni" className="text-white">Alumni</SelectItem>
+                    <SelectItem value="recruiter" className="text-white">Recruiter</SelectItem>
+                    <SelectItem value="mentor" className="text-white">Mentor</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
