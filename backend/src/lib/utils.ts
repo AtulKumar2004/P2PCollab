@@ -1,7 +1,9 @@
+import type { Response } from "express";
 import jwt from "jsonwebtoken";
+import mongoose from "mongoose";
 
-export const generateToken = (userId,res) => {
-    const token = jwt.sign({userId},process.env.JWT_SECRET_KEY,{
+export const generateToken = (userId: string | mongoose.Types.ObjectId,res: Response) => {
+    const token = jwt.sign({userId},process.env.JWT_SECRET_KEY!,{
         expiresIn: "7d"
     });
 

@@ -1,4 +1,15 @@
 import mongoose from "mongoose";
+import { Document } from "mongoose";
+
+export interface IUser extends Document {
+  _id: mongoose.Types.ObjectId;
+  name: string;
+  email: string;
+  password: string;
+  role: string;
+  year?: number;
+  branch?: string;
+}
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -28,14 +39,14 @@ const userSchema = new mongoose.Schema({
   year: {
     type: Number,
     enum: [1, 2, 3, 4],
-    required: function() {
+    required: function(this: IUser) {
       return this.role === 'student';
     }
   },
 
   branch: {
     type: String,
-    required: function() {
+    required: function(this: IUser) {
       return this.role === 'student' || this.role === 'faculty';
     }
   },
@@ -60,6 +71,6 @@ const userSchema = new mongoose.Schema({
   },
 },{timestamps: true});
 
-const User = mongoose.model("User",userSchema); 
+const User = mongoose.model<IUser>("User",userSchema); 
 
 export default User;
