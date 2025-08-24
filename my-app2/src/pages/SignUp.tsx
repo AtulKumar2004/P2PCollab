@@ -39,8 +39,36 @@ const SignUp: React.FC = () => {
         alignItems: "center",
         justifyContent: "center",
         padding: "2rem",
+        background: "black",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
+      <div
+        style={{
+          position: "absolute",
+          top: "15%",
+          left: "15%",
+          width: "250px",
+          height: "250px",
+          background: "radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%)",
+          borderRadius: "50%",
+          filter: "blur(35px)",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          bottom: "25%",
+          right: "20%",
+          width: "180px",
+          height: "180px",
+          background: "radial-gradient(circle, rgba(147, 51, 234, 0.08) 0%, transparent 70%)",
+          borderRadius: "50%",
+          filter: "blur(25px)",
+        }}
+      />
+
       <div
         style={{
           background: "rgba(255, 255, 255, 0.05)",
@@ -50,6 +78,8 @@ const SignUp: React.FC = () => {
           backdropFilter: "blur(10px)",
           width: "100%",
           maxWidth: "500px",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
@@ -58,11 +88,12 @@ const SignUp: React.FC = () => {
               fontSize: "2rem",
               fontWeight: "bold",
               marginBottom: "0.5rem",
+              color: "white",
             }}
           >
             Join Our Network
           </h1>
-          <p style={{ opacity: 0.8 }}>Create your account to start collaborating and learning</p>
+          <p style={{ opacity: 0.8, color: "white" }}>Create your account to start collaborating and learning</p>
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -80,6 +111,7 @@ const SignUp: React.FC = () => {
                   display: "block",
                   marginBottom: "0.5rem",
                   fontWeight: "500",
+                  color: "white",
                 }}
               >
                 First Name
@@ -108,6 +140,7 @@ const SignUp: React.FC = () => {
                   display: "block",
                   marginBottom: "0.5rem",
                   fontWeight: "500",
+                  color: "white",
                 }}
               >
                 Last Name
@@ -138,6 +171,7 @@ const SignUp: React.FC = () => {
                 display: "block",
                 marginBottom: "0.5rem",
                 fontWeight: "500",
+                color: "white",
               }}
             >
               Email
@@ -167,6 +201,7 @@ const SignUp: React.FC = () => {
                 display: "block",
                 marginBottom: "0.5rem",
                 fontWeight: "500",
+                color: "white",
               }}
             >
               Role
@@ -206,6 +241,7 @@ const SignUp: React.FC = () => {
                   display: "block",
                   marginBottom: "0.5rem",
                   fontWeight: "500",
+                  color: "white",
                 }}
               >
                 Password
@@ -234,6 +270,7 @@ const SignUp: React.FC = () => {
                   display: "block",
                   marginBottom: "0.5rem",
                   fontWeight: "500",
+                  color: "white",
                 }}
               >
                 Confirm Password
@@ -272,7 +309,7 @@ const SignUp: React.FC = () => {
         </form>
 
         <div style={{ textAlign: "center" }}>
-          <p style={{ opacity: 0.8 }}>
+          <p style={{ opacity: 0.8, color: "white" }}>
             Already have an account?{" "}
             <Link
               to="/signin"

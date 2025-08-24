@@ -20,7 +20,6 @@ const SignIn: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("Sign in attempt:", formData)
-    // Handle sign in logic here
   }
 
   return (
@@ -31,8 +30,36 @@ const SignIn: React.FC = () => {
         alignItems: "center",
         justifyContent: "center",
         padding: "2rem",
+        background: "black",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
+      <div
+        style={{
+          position: "absolute",
+          top: "10%",
+          left: "10%",
+          width: "300px",
+          height: "300px",
+          background: "radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%)",
+          borderRadius: "50%",
+          filter: "blur(40px)",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          bottom: "20%",
+          right: "15%",
+          width: "200px",
+          height: "200px",
+          background: "radial-gradient(circle, rgba(147, 51, 234, 0.1) 0%, transparent 70%)",
+          borderRadius: "50%",
+          filter: "blur(30px)",
+        }}
+      />
+
       <div
         style={{
           background: "rgba(255, 255, 255, 0.05)",
@@ -42,6 +69,8 @@ const SignIn: React.FC = () => {
           backdropFilter: "blur(10px)",
           width: "100%",
           maxWidth: "400px",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
@@ -50,11 +79,12 @@ const SignIn: React.FC = () => {
               fontSize: "2rem",
               fontWeight: "bold",
               marginBottom: "0.5rem",
+              color: "white",
             }}
           >
             Welcome Back
           </h1>
-          <p style={{ opacity: 0.8 }}>Sign in to your account to continue learning</p>
+          <p style={{ opacity: 0.8, color: "white" }}>Sign in to your account to continue learning</p>
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -64,6 +94,7 @@ const SignIn: React.FC = () => {
                 display: "block",
                 marginBottom: "0.5rem",
                 fontWeight: "500",
+                color: "white",
               }}
             >
               Email
@@ -93,6 +124,7 @@ const SignIn: React.FC = () => {
                 display: "block",
                 marginBottom: "0.5rem",
                 fontWeight: "500",
+                color: "white",
               }}
             >
               Password
@@ -130,7 +162,7 @@ const SignIn: React.FC = () => {
         </form>
 
         <div style={{ textAlign: "center" }}>
-          <p style={{ opacity: 0.8 }}>
+          <p style={{ opacity: 0.8, color: "white" }}>
             Don't have an account?{" "}
             <Link
               to="/signup"
