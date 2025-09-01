@@ -10,7 +10,7 @@ const storage = new CloudinaryStorage({
 
     const options: UploadApiOptions = {
       folder: "posts",
-      resource_type: isPdf ? "raw" : "auto",
+      resource_type: "auto",
       public_id: `${Date.now()}-${file.originalname.replace(/\.[^/.]+$/, "")}`,
     };
 
